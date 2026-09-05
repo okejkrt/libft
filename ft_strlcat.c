@@ -6,7 +6,7 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 12:32:45 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/08/26 13:44:37 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/08/26 18:29:52 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dst_len;
 	size_t	src_len;
 	size_t	total_len;
-	
+
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	if (dst_len >= size)
@@ -45,4 +45,3 @@ int main(void)
 
     return (0);
 }
-
