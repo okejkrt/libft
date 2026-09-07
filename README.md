@@ -52,8 +52,8 @@ gcc main.c -L. -lft -o my_program
 
 ### AI Usage Declaration
 In accordance with the 42 AI Instructions guidelines, artificial intelligence was utilized as a peer-learning tool and simulated reviewer during this project. 
-* **Tasks Assisted:** AI was used for automated code review, optimizing time complexities (such as implementing branchless logic in character classification functions and a highly optimized one-pass pointer arithmetic loop in `ft_split`), and verifying edge-case memory safety (specifically handling integer overflow protections in `ft_calloc` and ensuring zero memory leaks during `malloc` allocation failures in `ft_lstmap`).
-* **Parts Influenced:** AI-assisted code reviews influenced the architectural separation of helper functions utilizing the `static` keyword, helping to adhere closely to the Norm rule limitations while improving nízkoúrovňová memory safety across Part 1, Part 2, and Part 3. No code was copied blindly; all logic was thoroughly reasoned through and peer-reviewed against strict requirements.
+* **Tasks Assisted:** AI was used for automated code review, optimizing time complexities and verifying edge-case memory safety.
+* **Parts Influenced:** Helping to adhere closely to the Norm rule limitations. No code was copied blindly; all logic was thoroughly reasoned through and peer-reviewed against strict requirements.
 
 ## Library Functions Overview
 
