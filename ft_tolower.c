@@ -6,14 +6,14 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 18:49:26 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/08/26 18:50:19 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 11:06:04 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int	ft_tolower(int c)
-{		
+{
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	return (c);

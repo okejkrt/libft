@@ -6,7 +6,7 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 12:54:06 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/09/02 09:54:39 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 10:53:58 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub_s[len] = '\0';
 	return (sub_s);
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-//     char *str1 = "Hello world!";
-
-//     printf("Original: %s\n", ft_substr(str1, 6, 5));
-
-//     return (0);
-// }
-

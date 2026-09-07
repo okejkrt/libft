@@ -6,7 +6,7 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:24:51 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/09/02 09:52:02 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 11:05:39 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 	size_t	len;
-	
+
 	if (!s1 || !set)
-    	return (NULL);
+		return (NULL);
 	start = 0;
 	end = ft_strlen(s1);
 	while (start < end && ft_strchr(set, s1[start]))
@@ -34,15 +34,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_memcpy(trimmed_s, &s1[start], len);
 	trimmed_s[len] = '\0';
 	return (trimmed_s);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*s1 = "   ---Hello World!---   ";
-	char	*set = " -";
-
-	printf("%s", ft_strtrim(s1, set));
-	return (0);
 }

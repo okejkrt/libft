@@ -6,22 +6,13 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 13:24:14 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/08/24 14:02:34 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 10:49:50 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
 #include "libft.h"
 
 int	ft_isprint(int c)
 {
 	return (c >= ' ' && c <= '~');
 }
-
-// int	main(void)
-// {
-// 	char	c;
-
-// 	c = '~';
-// 	printf("%d\n", ft_isprint(c));
-// }

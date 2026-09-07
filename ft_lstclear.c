@@ -6,7 +6,7 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 15:18:58 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/09/05 15:35:05 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 11:09:39 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
-	
+
 	if (!lst || !del)
 		return ;
 	while (*lst)

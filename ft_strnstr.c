@@ -6,7 +6,7 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/27 13:36:22 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/08/27 14:17:45 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 10:53:36 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,4 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		len--;
 	}
 	return (NULL);
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-    char	*haystack = "Hello to the whole world!";
-	char	*needle = "wo";
-
-    printf("%s\n", ft_strnstr(haystack, needle, 21));
-
-    return (0);
 }

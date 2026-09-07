@@ -6,7 +6,7 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 10:04:57 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/09/02 12:29:54 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 11:52:56 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,19 +49,11 @@ char	**ft_memfail(char **splitted_s, size_t i)
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_splitcpy(char const *s, char **splitted_s)
 {
-	char	**splitted_s;
-	size_t	num_s;
-	size_t	len_s;
-	size_t	i;
+	size_t		i;
+	size_t		len_s;
 
-	if (!s)
-    	return (NULL);
-	num_s = ft_splitcount(s, c);
-	splitted_s = malloc(sizeof(char *) * (num_s + 1));
-	if (splitted_s == NULL)
-		return (NULL);
 	i = 0;
 	while (i < num_s)
 	{
@@ -81,20 +73,48 @@ char	**ft_split(char const *s, char c)
 	return (splitted_s);
 }
 
-#include <stdio.h>
-
-int	main(void)
+char	**ft_split(char const *s, char c)
 {
-	char	*s = "jedna dva tri ctyri";
-	int		i;
 	char	**splitted_s;
+	size_t	num_s;
 
-	splitted_s = ft_split(s, ' ');
-	i = 0;
-	while (i < 4)
-	{
-		printf("%s\n", splitted_s[i]);
-		i++;
-	}
-	return (0);
+	if (!s)
+		return (NULL);
+	num_s = ft_splitcount(s, c);
+	splitted_s = malloc(sizeof(char *) * (num_s + 1));
+	if (splitted_s == NULL)
+		return (NULL);
+	return (ft_splitcpy(s, splitted_s));
 }
+
+// char	**ft_split(char const *s, char c)
+// {
+// 	char	**splitted_s;
+// 	size_t	num_s;
+// 	size_t	len_s;
+// 	size_t	i;
+
+// 	if (!s)
+// 		return (NULL);
+// 	num_s = ft_splitcount(s, c);
+// 	splitted_s = malloc(sizeof(char *) * (num_s + 1));
+// 	if (splitted_s == NULL)
+// 		return (NULL);
+// 	i = 0;
+// 	while (i < num_s)
+// 	{
+// 		while (*s && *s == c)
+// 			s++;
+// 		len_s = ft_splitlen(s, c);
+// 		splitted_s[i] = malloc(len_s + 1);
+// 		if (splitted_s[i] == NULL)
+// 			return (ft_memfail(splitted_s, i));
+// 		ft_memcpy(splitted_s[i], s, len_s);
+// 		while (*s && *s != c)
+// 			s++;
+// 		splitted_s[i][len_s] = '\0';
+// 		i++;
+// 	}
+// 	splitted_s[i] = NULL;
+// 	return (splitted_s);
+// }

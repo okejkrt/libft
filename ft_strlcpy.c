@@ -6,18 +6,16 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 11:52:27 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/08/26 12:26:02 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 10:56:44 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	
+
 	i = 0;
 	if (size > 0)
 	{
@@ -32,16 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	return (i);
 }
-
-int main(void)
-{
-    char str1[13] = "Hello world!";
-    char str2[6];
-
-    ft_strlcpy(str2, str1, 6);
-    printf("Original: %s\n", str1);
-	printf("Copy: %s\n", str2);
-
-    return (0);
-}
-

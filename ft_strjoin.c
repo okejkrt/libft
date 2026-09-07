@@ -6,7 +6,7 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 16:43:41 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/09/01 17:23:11 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 11:03:00 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	total_len;
 
 	if (!s1 || !s2)
-    	return (NULL);
+		return (NULL);
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
 	total_len = len_s1 + len_s2;

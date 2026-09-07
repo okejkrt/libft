@@ -6,7 +6,7 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 12:21:34 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/09/05 13:06:59 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 10:52:13 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,4 @@ void	ft_putnbr_fd(int n, int fd)
 		nb = -nb;
 	}
 	ft_putnbr_fd_recursive(nb, fd);
-}
-
-int	main(void)
-{
-	ft_putnbr_fd(-123456, 1);
 }

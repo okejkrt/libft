@@ -6,7 +6,7 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/27 12:41:47 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/08/27 13:14:06 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 10:51:22 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		n--;
 	}
 	return (0);
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-    char dest[] = "abcde";
-    char src[] = "abc";
-
-    printf("%d\n", ft_memcmp(dest, src, 5));
-
-    return (0);
 }

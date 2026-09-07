@@ -6,12 +6,10 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 12:32:45 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/08/26 18:29:52 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 10:52:58 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
@@ -32,16 +30,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	dst[dst_len] = '\0';
 	return (total_len);
-}
-
-int main(void)
-{
-    char dest[13] = "Hello ";
-    char src[] = "world!";
-	size_t	len;
-
-    len = ft_strlcat(dest, src, 13);
-    printf("%s\n%zu\n", dest, len);
-
-    return (0);
 }

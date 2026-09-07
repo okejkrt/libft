@@ -6,13 +6,13 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 11:57:52 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/09/03 13:26:46 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 10:58:54 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_numlen(long	nb)
+int	ft_numlen(long nb)
 {
 	int	len;
 
@@ -46,7 +46,7 @@ char	*ft_itoa(int n)
 	if (nb < 0)
 	{
 		str[0] = '-';
-		nb = -nb; 
+		nb = -nb;
 	}
 	while (nb > 9)
 	{
@@ -56,14 +56,4 @@ char	*ft_itoa(int n)
 	}
 	str[len] = (nb % 10) + '0';
 	return (str);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	int		n = -1;
-	
-	printf("%s\n", ft_itoa(n));
-	return (0);
 }

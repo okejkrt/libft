@@ -6,22 +6,13 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 11:53:40 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/08/24 14:03:03 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 10:49:41 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
 #include "libft.h"
 
 int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }
-
-// int	main(void)
-// {
-// 	char	c;
-
-// 	c = '9';
-// 	printf("%d\n", ft_isdigit(c));
-// }

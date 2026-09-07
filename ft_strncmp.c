@@ -6,7 +6,7 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 22:04:27 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/08/26 22:26:43 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 10:53:30 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,4 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		n--;
 	}
 	return (0);
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-    char dest[] = "Abc";
-    char src[] = "Ab";
-
-    printf("%d\n", ft_strncmp(dest, src, 3));
-
-    return (0);
 }

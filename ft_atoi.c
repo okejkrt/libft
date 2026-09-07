@@ -6,7 +6,7 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/27 15:30:59 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/08/27 16:05:58 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 10:48:39 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,4 @@ int	ft_atoi(const char *str)
 		str++;
 	}
 	return (num * neg);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	const char	*str = "-12345";
-
-	printf("%d", ft_atoi(str));
-
-	return (0);
 }
