@@ -6,13 +6,13 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 11:57:52 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/09/07 10:58:54 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 17:26:46 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_numlen(long nb)
+static int	ft_numlen(long nb)
 {
 	int	len;
 

@@ -6,13 +6,13 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 12:21:34 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/09/07 10:52:13 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 17:44:35 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd_recursive(long nb, int fd)
+static void	ft_putnbr_fd_recursive(long nb, int fd)
 {
 	if (nb > 9)
 	{

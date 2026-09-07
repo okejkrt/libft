@@ -6,115 +6,65 @@
 /*   By: onkejkrt <onkejkrt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 10:04:57 by onkejkrt          #+#    #+#             */
-/*   Updated: 2026/09/07 11:52:56 by onkejkrt         ###   ########.fr       */
+/*   Updated: 2026/09/07 17:18:17 by onkejkrt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_splitcount(char const *s, char c)
+static size_t	ft_splitcount(char const *s, char c)
 {
-	size_t	num_s;
+	size_t	s_count;
 	size_t	i;
 
-	num_s = 0;
+	s_count = 0;
 	i = 0;
 	while (s[i])
 	{
 		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
-			num_s++;
+			s_count++;
 		i++;
 	}
-	return (num_s);
+	return (s_count);
 }
 
-size_t	ft_splitlen(char const *s, char c)
-{
-	size_t	len_s;
-
-	len_s = 0;
-	while (s[len_s] && s[len_s] != c)
-		len_s++;
-	return (len_s);
-}
-
-char	**ft_memfail(char **splitted_s, size_t i)
+static char	**ft_memfail(char **s_splitted, size_t i)
 {
 	while (i > 0)
 	{
 		i--;
-		free(splitted_s[i]);
+		free(s_splitted[i]);
 	}
-	free(splitted_s);
+	free(s_splitted);
 	return (NULL);
-}
-
-char	**ft_splitcpy(char const *s, char **splitted_s)
-{
-	size_t		i;
-	size_t		len_s;
-
-	i = 0;
-	while (i < num_s)
-	{
-		while (*s && *s == c)
-			s++;
-		len_s = ft_splitlen(s, c);
-		splitted_s[i] = malloc(len_s + 1);
-		if (splitted_s[i] == NULL)
-			return (ft_memfail(splitted_s, i));
-		ft_memcpy(splitted_s[i], s, len_s);
-		while (*s && *s != c)
-			s++;
-		splitted_s[i][len_s] = '\0';
-		i++;
-	}
-	splitted_s[i] = NULL;
-	return (splitted_s);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**splitted_s;
-	size_t	num_s;
+	char	**s_splitted;
+	size_t	s_count;
+	size_t	i;
+	char const	*s_start;
 
 	if (!s)
 		return (NULL);
-	num_s = ft_splitcount(s, c);
-	splitted_s = malloc(sizeof(char *) * (num_s + 1));
-	if (splitted_s == NULL)
+	s_count = ft_splitcount(s, c);
+	s_splitted = malloc(sizeof(char *) * (s_count + 1));
+	if (s_splitted == NULL)
 		return (NULL);
-	return (ft_splitcpy(s, splitted_s));
+	i = 0;
+	while (i < s_count)
+	{
+		while (*s && *s == c)
+			s++;
+		s_start = s;
+		while (*s && *s != c)
+			s++;
+		s_splitted[i] = ft_substr(s_start, 0, (size_t)(s - s_start));
+		if (s_splitted[i] == NULL)
+			return (ft_memfail(s_splitted, i));
+		i++;
+	}
+	s_splitted[i] = NULL;
+	return (s_splitted);
 }
-
-// char	**ft_split(char const *s, char c)
-// {
-// 	char	**splitted_s;
-// 	size_t	num_s;
-// 	size_t	len_s;
-// 	size_t	i;
-
-// 	if (!s)
-// 		return (NULL);
-// 	num_s = ft_splitcount(s, c);
-// 	splitted_s = malloc(sizeof(char *) * (num_s + 1));
-// 	if (splitted_s == NULL)
-// 		return (NULL);
-// 	i = 0;
-// 	while (i < num_s)
-// 	{
-// 		while (*s && *s == c)
-// 			s++;
-// 		len_s = ft_splitlen(s, c);
-// 		splitted_s[i] = malloc(len_s + 1);
-// 		if (splitted_s[i] == NULL)
-// 			return (ft_memfail(splitted_s, i));
-// 		ft_memcpy(splitted_s[i], s, len_s);
-// 		while (*s && *s != c)
-// 			s++;
-// 		splitted_s[i][len_s] = '\0';
-// 		i++;
-// 	}
-// 	splitted_s[i] = NULL;
-// 	return (splitted_s);
-// }
