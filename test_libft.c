@@ -168,7 +168,7 @@ void	test_ft_isascii(void)
 void	test_ft_isprint(void)
 {
 	int	tests[] = {31, ' ', 'A', '~', 127, 0, -1};
-	int	num_tests = sizeof(tests) / sizeof(tests);
+	int	num_tests = sizeof(tests) / sizeof(tests[0]);
 	int	res_ft;
 	int	res_sys;
 	int	errors = 0;
@@ -385,7 +385,7 @@ void	test_ft_strlcat(void)
 void	test_ft_toupper(void)
 {
 	int	tests[] = {'a', 'm', 'z', 'A', 'Z', '0', ' ', '@', 0, 127};
-	int	num_tests = sizeof(tests) / sizeof(tests);
+	int	num_tests = sizeof(tests) / sizeof(tests[0]);
 	int	res_ft;
 	int	res_sys;
 	int	errors = 0;
@@ -413,7 +413,7 @@ void	test_ft_toupper(void)
 void	test_ft_tolower(void)
 {
 	int	tests[] = {'A', 'M', 'Z', 'a', 'z', '0', ' ', '@', 0, 127};
-	int	num_tests = sizeof(tests) / sizeof(tests);
+	int	num_tests = sizeof(tests) / sizeof(tests[0]);
 	int	res_ft;
 	int	res_sys;
 	int	errors = 0;
